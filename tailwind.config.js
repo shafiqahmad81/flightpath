@@ -8,11 +8,18 @@ export default {
         inter: ['"Inter", sans-serif'],
       },
       colors: {
-        "text-color": "var(--black)",
-        "text-color-alt": "var(--off-black)",
-        "button-color": "var(--orange)",
-        "button-rollover-color": "var(--light-orange)",
-        "header-background": "var(--dark-orange)",
+        "off-black": "hsl(var(--off-black))",
+        orange: {
+          DEFAULT: "hsl(var(--orange))",
+          50: "hsl(var(--light-orange-hover))",
+          100: "hsl(var(--light-orange))",
+          750: "hsl(var(--dark-orange-alt))",
+          900: "hsl(var(--dark-orange))",
+        },
+        theme: {
+          DEFAULT: "hsl(var(--theme-color))",
+          100: "hsl(var(--theme-color-light))",
+        },
       },
     },
   },

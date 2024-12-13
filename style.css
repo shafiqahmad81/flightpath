@@ -1,38 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-    --body-bg: #333;
-
-    --demo-theme-color: #ece7df;
-    --demo-theme-color-light: #f5f4f2;
-    --demo-white-color: #ffffff;
-    --demo-body-bg: #000000;
-
-    --white: #ffffff;
-    --black: #000000;
-    --off-white: #faf0e6;
-    --off-black: #434339;
-    --blue: #6495ed;
-    --red: #e33d74;
-    --light-orange: #f6c347;
-    --orange: #edb52f;
-    --dark-orange: #c78f01;
-    --dark-orange-alt: #857550;
-
+  --off-white: 30 66.67 94.12;
+  --off-black: 60 8.06 24.31;
+  --orange: 42.32 84.07 55.69;
+  --light-orange-hover: 42.38 84 70.59;
+  --light-orange: 42.51 90.67 62.16;
+  --dark-orange: 43.03 99 39.22;
+  --dark-orange-alt: 41.89 24.88 41.76;
+  --theme-color: 36.92 25.49 90;
+  --theme-color-light: 40 13.04 95.49;
 }
 
-  @layer base{
-
+@layer base {
   body {
-    @apply font-open  min-w-80;
+    @apply font-open min-w-80 bg-black;
   }
+  main {
+    @apply max-w-[1200px] mx-auto;
   }
+  h1,
+  .h1 {
+    @apply text-4xl lg:text-5xl lg:leading-[1.1] font-bold text-off-black mb-5;
+  }
+  h2,
+  .h2 {
+    @apply text-2xl text-off-black lg:text-[2rem] lg:leading-[1.1] font-bold;
+  }
+  /*h3,
+  .h3 {
+    @apply text-lg lg:text-2xl lg:leading-6 font-inter font-semibold tracking-wide text-secondary2-color;
+  }
+  h4,
+  .h4 {
+    @apply text-base lg:text-xl font-medium font-body text-secondary2-color mb-6;
+  }
+  h5,
+  .h5 {
+    @apply text-sm lg:text-base;
+  }
+  h6,
+  .h6 {
+    @apply text-xs font-medium mb-1;
+  } */
+  p {
+    @apply text-lg leading-8 mb-4 text-off-black;
+  }
+}
 
-  @layer utilities {
-    .container {
-      @apply px-6 max-w-[1218px] mx-auto;
-    }
+@layer components {
+  .btn {
+    @apply bg-gradient-to-b from-orange-100 to-orange text-black text-[1.375rem] leading-[1.2] font-bold border-none text-center rounded-md px-6 py-4 shadow-[0px_1px_3px_0px_rgba(0,_0,_0,_0.2),inset_0px_0px_0px_1px_rgba(0,_0,_0,_0.2)]  hover:bg-none hover:bg-orange-50  transition-all ease-in-out duration-500 inline-block antialiased;
   }
+}
+
+@layer utilities {
+  .container {
+    @apply px-[5%] max-w-[1248px] mx-auto;
+  }
+}
